@@ -11,7 +11,5 @@ int sum_in_range(int x, int y){
 }
 
 int main(){
-    
     cout << sum_in_range(5, 8) << endl;
-    return 0;
 }
