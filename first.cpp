@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bit>
 using namespace std;
 
 int sum_in_range(int x, int y){
