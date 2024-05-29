@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
 void reverseArray(int arr[], int size){
@@ -7,9 +8,7 @@ void reverseArray(int arr[], int size){
     int ele;
     while (i < j)
     {
-        ele = arr[i];
-        arr[i] = arr[j];
-        arr[j] = ele;
+        swap(arr[i], arr[j]);
         i++;
         j--;
     }
