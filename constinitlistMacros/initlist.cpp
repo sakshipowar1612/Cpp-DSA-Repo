@@ -8,7 +8,7 @@ class abc{
     public:
 
     //ctor: old method
-    // abc(int _x, int _y, int _z=0){
+    // abc(int _x, int _y, int _z=0){ // default argument is given atmost right side
     //     x = _x;
     //     *y = _y;
     //     z = _z;
