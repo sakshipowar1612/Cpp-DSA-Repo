@@ -12,7 +12,6 @@ public:
     int present;
     string name;
     int nos;
-    int *v;
 
     //default ctor
     student(){
