@@ -26,6 +26,8 @@ class MyString{
 
         bool empty() const;
 
+        //overload insertion operator << for easy output
+        
 };
 
 #endif //MYSTRING_H
