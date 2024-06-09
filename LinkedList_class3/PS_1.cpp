@@ -96,6 +96,24 @@ void reverseLL(Node *&head){
     return;
 }
 
+void reverse(Node *&curr, Node *&prev) {
+    if (curr == NULL) {
+        return;
+    } else {
+        Node *temp = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = temp;
+        reverse(curr, prev);
+    }
+}
+
+void recursivereverse(Node *&head) { // Pass head by reference
+    Node *curr = head, *prev = NULL;
+    reverse(curr, prev);
+    head = prev;
+}
+
 int main(){
     Node *head = NULL; // Initialize head as NULL
     insertAtPosition(head, 2, 1);
@@ -104,6 +122,6 @@ int main(){
     insertAtPosition(head, 8, 4);
     insertAtPosition(head, 10, 5);
     printLL(head);
-    reverseLL(head);
+    recursivereverse(head);
     printLL(head);
 }
