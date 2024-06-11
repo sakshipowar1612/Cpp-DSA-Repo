@@ -144,11 +144,6 @@ int main(){
     insertAtPosition(head, 9, 1);
     insertAtPosition(head, 9, 2);
     insertAtPosition(head, 9, 3);
-    
-    insertAtPosition(head, 9, 4);
-    insertAtPosition(head, 9, 5);
-    insertAtPosition(head, 9, 6);
-    
     printLL(head);
 
     addOne(head);
