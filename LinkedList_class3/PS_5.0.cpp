@@ -186,7 +186,7 @@ int main(){
     insertAtPosition(head, 50, 5);
     insertAtPosition(head, 60, 6);
     insertAtPosition(head, 70, 7);
-    head->next->next->next->next->next->next->next = head->next->next->next->next;
+    head->next->next->next->next->next->next->next = head->next;
 
 
     cout << (hasCycle(head) ? "Cycle detected" : "No cycle detected") << endl;
@@ -196,6 +196,7 @@ int main(){
 
     removeLoop(head);
     cout << (hasCycle(head) ? "Cycle detected" : "No cycle detected") << endl;
+    printLL(head);
 
     // Free the list (to avoid memory leaks in real use, but here it will not be reached)
    
