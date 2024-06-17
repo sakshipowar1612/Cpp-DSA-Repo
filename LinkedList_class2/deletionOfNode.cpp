@@ -121,6 +121,14 @@ void insertAtTail(Node* &head, int _data){
     
 }
 
+// void sa(Node* &head){
+//     cout << &head << endl;
+// }
+
+void ca( int a){
+    cout << &a;
+}
+
 
 int main(){
 
@@ -157,5 +165,11 @@ int main(){
     printLL(first);
     deleteByPosition(first, 2);
     printLL(first);
+
+    // cout << &first << endl;
+    // sa(first);
+    int a = 2;
+    cout << &a << endl;
+    ca(a);
 
 }
