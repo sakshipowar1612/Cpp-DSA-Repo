@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+
 int main()
 {
     vector<vector<int>> arr(5, vector<int>(10, 0));
@@ -22,7 +23,6 @@ int main()
         0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0
     */
-
    vector<vector<int>>brr;
    vector<int>vec1(1,1);
    vector<int>vec2(2,2);

@@ -27,6 +27,7 @@ bool hasCycle(ListNode* head) {
     return false;
 }
 
+
 int main() {
     // Create a linked list with a cycle
     ListNode* head = new ListNode(1);

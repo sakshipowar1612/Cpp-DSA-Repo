@@ -41,7 +41,7 @@ public:
 int main(){
     Professor p;
     // p.walk(); //request for memeber 'walk' is ambiguous
-    //Diamon Problem
+    //Diamond Problem
     //solution 1.Scope Resolution
     p.Teacher::walk();
     p.Researcher::walk();

@@ -55,7 +55,7 @@ int main(){
     // student s2 = s1; 
     // student s2(s1);
     student s2;
-    s2 = s1;
+    s2 = s1;                             
 
     // cout << s1.name << "\n" << s2.name << endl;
     return 0;

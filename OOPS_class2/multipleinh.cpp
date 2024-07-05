@@ -28,7 +28,7 @@ public:
 };
 
 
-class professor: public Teacher, public researcher{
+class professor: public Teacher, public researcher,{
 public:
     void bore()
     {

@@ -1,23 +1,43 @@
-#ifndef MYSTRING_H
-#define MYSTRING_H  //If MYSTRING_H is not define then define it.
+#include "MyString.h"
+#include <cstring> // strcpy
+
+// definations of all the functions declared in MyString.h
+MyString::MyString(){
+
+    data = new char[1];
+    length = 0;
+    data[0] = '\0';
+
+}
+
+//param ctor
+MyString::MyString(const char *str){
+
+    data = new char[strlen(str)+1];
+    length = strlen(str);
+    strcpy(data, str);
+
+}
 
 
-#endif //MYSTRING_H
+MyString::MyString(const MyString &other){
+    data = new char[other.length+1];
+    length = other.length;
+    strcpy(data, other.data);
 
+}
 
-#include<iostream>
+MyString::~MyString(){
+    delete[] data;
 
-class Mytring{
+}
 
-    private:
-    char *data; //pointer to character array data
-    int length; //size of my string
+int MyString::size( ) const{
+    return length;
+}
 
-    public:
-        //default ctror
-        Mystring(){
+bool MyString::empty( ) const{
+    return length==0;
+    
+}
 
-        }
-
-
-};

@@ -31,7 +31,7 @@ void findSubSequence(string str, string output, int index){
 
 
 int main(){
-    string s1 = "abc";
+    string s1 = "xy";
     string s2;
     int index = 0;
     findSubSequence(s1,s2,index); 
