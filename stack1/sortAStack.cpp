@@ -49,6 +49,30 @@ void sortTheStack(stack<int> &s)
     }
 }
 
+void insertInSortedStack(stack<int>&s, int data){
+    if (s.empty() || s.top() <= data )
+    {
+        s.push(data);
+        return;
+    }
+    int temp = s.top();
+    s.pop();
+    insertInSortedStack(s, data);
+    s.push(temp);
+}
+
+void sortStack(stack<int>&s){
+    if (s.empty())
+    {
+        return;
+    }
+    int temp = s.top();
+    s.pop();
+    sortStack(s);
+    insertInSortedStack(s, temp);
+}
+
+
 void printStack(stack<int> st)
 {
     if (st.empty())
@@ -71,6 +95,7 @@ int main()
     st.push(8);
     st.push(5);
     st.push(0);
-    sortTheStack(st);
+    // sortTheStack(st);
+    sortStack(st);
     printStack(st);
 }
