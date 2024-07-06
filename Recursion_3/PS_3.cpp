@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+//INCLUDE EXCLUDE PATTERN
+
 void seqOfString(string str, string substr, int index)
 {
     if (index >= str.length())
@@ -38,6 +40,7 @@ void seqOfStringInVec(string str, string substr, int index, vector<string>&vec)
         vec.push_back(substr);
         return;
     }
+    
     else
     {
         char ch = str[index];
@@ -69,4 +72,5 @@ int main()
     for(string i : ans){
         cout << i << endl;
     }
+    cout << ans.size();
 }
