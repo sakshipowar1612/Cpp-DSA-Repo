@@ -2,6 +2,7 @@
 #include <stack>
 using namespace std;
 
+//my solution
 void remove(stack<int>&sta, int data){
     if (sta.empty())
     {
@@ -48,6 +49,8 @@ void sortTheStack(stack<int> &s)
         }
     }
 }
+
+//love babbar solution
 
 void insertInSortedStack(stack<int>&s, int data){
     if (s.empty() || s.top() <= data )
