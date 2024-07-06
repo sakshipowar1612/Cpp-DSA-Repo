@@ -39,7 +39,7 @@ public:
 
     // Method to check if the stack is full
     bool isFull() {
-        return this->top == size - 1;
+        return this->top == this->size - 1;
     }
 
     // Method to get the top element of the stack
