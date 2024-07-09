@@ -151,6 +151,7 @@ int main()
         q.pop();
         q.print();
     }
+    cout << "Queue size: " << q.getSize() << endl;
 
     return 0;
 }
