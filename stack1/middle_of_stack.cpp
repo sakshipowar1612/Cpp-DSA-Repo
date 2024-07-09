@@ -34,9 +34,9 @@ int main(){
     stack<int>st;
     st.push(10);
     st.push(33);
-    // st.push(47);
-    // st.push(25);
-    // st.push(37);
+    st.push(47);
+    st.push(25);
+    st.push(37);
    
 
     cout << giveMiddlaEle(st) << endl;

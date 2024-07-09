@@ -6,6 +6,7 @@ using namespace std;
 
 void prevSmallerEle(vector<int>&vec){
     stack<int>s;
+    vector<int>ans;
     s.push(-1);
     for (int i = 0; i < vec.size(); i++)
     {
