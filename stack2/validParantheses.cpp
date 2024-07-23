@@ -18,7 +18,7 @@ bool isValid(string s)
     while (i != s.length())
     {
         char ch = s[i];
-        if (ch == '(' || ch == '{' || ch == '[' ch == '+' || ch == '-' || ch == '/' || ch == '*' || ch == '^' || ch == '%')
+        if (ch == '(' || ch == '{' || ch == '[' )
         {
             st.push(ch);
         }

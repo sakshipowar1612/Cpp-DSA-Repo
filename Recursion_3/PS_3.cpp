@@ -72,5 +72,5 @@ int main()
     for(string i : ans){
         cout << i << endl;
     }
-    cout << ans.size();
+    
 }

@@ -107,7 +107,7 @@ class stack{
 int main() {
     
     stack s(10);
-
+    
     // Demonstrate isFull and isEmpty functions
     cout << "Is stack1 empty? " << (s.isempty1() ? "Yes" : "No") << endl;
     cout << "Is stack2 empty? " << (s.isempty2() ? "Yes" : "No") << endl;

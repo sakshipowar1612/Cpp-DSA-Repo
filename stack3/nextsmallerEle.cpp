@@ -26,6 +26,8 @@ using namespace std;
 //     }
 // }
 
+//Brute Forcr approach
+
 void nextSmallerEle(vector<int>&vec){
     stack<int>s;
     s.push(-1);

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-
+//Remove all adjacent duplicates in string
 string removeDuplicates(string s)
 {
     stack<char> box;

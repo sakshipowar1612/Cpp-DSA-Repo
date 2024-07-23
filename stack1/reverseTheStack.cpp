@@ -1,7 +1,7 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-
+//TO : n*(n+1)/2 = n^2
 void insertAtBottom(stack<int>&sta, int ele){
     if (sta.empty())
     {
