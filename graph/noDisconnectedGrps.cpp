@@ -20,7 +20,7 @@ public:
         else{
             adjList[u].push_back(make_pair(v, w));
         }
-        printGraph();
+       
     }
 
 
@@ -60,8 +60,6 @@ public:
 
     void DFS(T src, unordered_map<T, bool>&visited){
         visited[src]=true;
-        cout << src << " ";
-
         for(auto i: adjList[src]){
             if (!visited[i.first])
             {
@@ -77,22 +75,19 @@ int main(){
     Graph <char>g;
     g.addEdge('a', 'b', 10, 1);
     g.addEdge('a', 'c', 20, 1);
-    g.addEdge('c', 'e', 10, 1);
-    g.addEdge('c', 'd', 10, 1);
-    g.addEdge('d', 'e', 20, 1);
     g.addEdge('e', 'f', 10, 1);
     //In ths case rather than calling for only one source we should give call for every node
     unordered_map<char, bool>visited;
-    g.DFS('a', visited);
-    // for(char node='a'; node<='f'; node++){
-    //     if (!visited[node])
-    //     {
-    //         g.BFS(node, visited);
-    //         cout << endl;
-    //     }
+    int noDisconnects = 0;
+    for(char node='a'; node<='f'; node++){
+        if (!visited[node])
+        {
+            g.DFS(node, visited);
+            noDisconnects++;
+        }
         
-    // }
-    
+    }
+    cout << "no. of disconnected graphs: " << noDisconnects << endl;
 
 
 }

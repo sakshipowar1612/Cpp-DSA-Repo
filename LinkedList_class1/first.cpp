@@ -12,7 +12,7 @@ class Node{
         this->next = NULL;
     }
     Node(int _data){
-        // cout << "I am inside Parameterized Constructoe" << endl;
+        // cout << "I am inside Parameterized Constructor" << endl;
         this->data = _data;
         this->next = NULL;
     }

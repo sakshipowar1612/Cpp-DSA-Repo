@@ -147,47 +147,49 @@ void deleteNode(Node *&head, int position){
 
 
 int main(){
-    Node *head = new Node(10);
-    print(head);
-    insertAtHead(head, 5);
-    print(head);
-    insertAtHead(head, 0);
-    print(head);
+    // Node *head = new Node(10);
+    // print(head);
+    // insertAtHead(head, 5);
+    // print(head);
+    // insertAtHead(head, 0);
+    // print(head);
     
-    insertAtTail(head, 15);
-    print(head);
-    insertAtTail(head, 20);
-    print(head);
+    // insertAtTail(head, 15);
+    // print(head);
+    // insertAtTail(head, 20);
+    // print(head);
 
-    insertAtAnyposition(head, -5, 1);
-    print(head);
-    insertAtAnyposition(head, 25, 8);
-    print(head);
-    insertAtAnyposition(head, 7, 4);
-    print(head);
-    insertAtAnyposition(head, -5, 8);
-    print(head);
+    // insertAtAnyposition(head, -5, 1);
+    // print(head);
+    // insertAtAnyposition(head, 25, 8);
+    // print(head);
+    // insertAtAnyposition(head, 7, 4);
+    // print(head);
+    // insertAtAnyposition(head, -5, 8);
+    // print(head);
     
 
-    deleteNode(head, 0);
-    print(head);
-    deleteNode(head, 9);
-    print(head);
-    deleteNode(head, 7);
-    print(head);
-    deleteNode(head, 2);
-    print(head);
-    deleteNode(head, 3);
-    print(head);
-    deleteNode(head, 4);
-    print(head);
-    deleteNode(head, 1);
-    print(head);
-    deleteNode(head, 3);
-    print(head);
-    deleteNode(head, 1);
-    print(head);
-    deleteNode(head, 2);
-    print(head);
+    // deleteNode(head, 0);
+    // print(head);
+    // deleteNode(head, 9);
+    // print(head);
+    // deleteNode(head, 7);
+    // print(head);
+    // deleteNode(head, 2);
+    // print(head);
+    // deleteNode(head, 3);
+    // print(head);
+    // deleteNode(head, 4);
+    // print(head);
+    // deleteNode(head, 1);
+    // print(head);
+    // deleteNode(head, 3);
+    // print(head);
+    // deleteNode(head, 1);
+    // print(head);
+    // deleteNode(head, 2);
+    // print(head);
+
+   
     
 }
