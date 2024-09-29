@@ -11,7 +11,7 @@ public:
 
     Heap(int _size)
     {
-        this->arr = new int[_size + 1];
+        this->arr = new int[_size];
         this->usedSize = 0;
         this->size = _size;
     }
@@ -24,14 +24,15 @@ public:
             return;
         }
         // usedsize increase kar jaenga
-        usedSize++;
+
         int index = usedSize;
         arr[index] = val;
+        usedSize++;
 
         // take the vale to int's correct position
-        while (index > 1)
+        while (index > 0)
         {
-            int parentIndex = index / 2;
+            int parentIndex = (index - 1) / 2;
             if (arr[parentIndex] < arr[index])
             {
                 swap(arr[parentIndex], arr[index]);
@@ -43,39 +44,56 @@ public:
             }
         }
     }
-
     int deleteFromHeap()
     {
-        int answer = arr[1];
-        arr[1] = arr[usedSize];
-        usedSize--;
-        int index = 1;
+        if (usedSize == 0)
+        {
+            cout << "Heap Underflow" << endl;
+            return -1; // Or any other error handling
+        }
+
+        int answer = arr[0]; // Root element of the heap
+
+        arr[0] = arr[usedSize - 1]; // Replace root with last element
+        usedSize--;                 // Reduce size of the heap
+
+        // Heapify the root to restore heap property
+        int index = 0;
         while (index < usedSize)
         {
-            int leftIndex = 2 * index;
-            int rightIndex = 2 * index + 1;
+            int leftIndex = 2 * index + 1;
+            int rightIndex = 2 * index + 2;
             int largestIndex = index;
-            if (leftIndex <= size && arr[largestIndex] < arr[leftIndex])
+
+            // Compare with the left child
+            if (leftIndex < usedSize && arr[largestIndex] < arr[leftIndex])
             {
                 largestIndex = leftIndex;
             }
-            if (rightIndex <= size && arr[largestIndex] < arr[rightIndex])
+
+            // Compare with the right child
+            if (rightIndex < usedSize && arr[largestIndex] < arr[rightIndex])
             {
                 largestIndex = rightIndex;
             }
+
+            // If the largest is still the current node, the heap is valid
             if (largestIndex == index)
             {
                 break;
             }
+
+            // Swap with the largest child and continue heapifying
             swap(arr[index], arr[largestIndex]);
             index = largestIndex;
         }
-        return answer;
+
+        return answer; // Return the root that was deleted
     }
 
     void print()
     {
-        for (int i = 1; i <= usedSize; i++)
+        for (int i = 0; i < usedSize; i++)
         {
             cout << arr[i] << " ";
         }
@@ -112,10 +130,11 @@ void buildHeap(int *arr, int n)
     }
 }
 
-
-void heapSort(int arr[], int n){
-    while(n != 1){
-        swap(arr[0], arr[n-1]);
+void heapSort(int arr[], int n)
+{
+    while (n != 1)
+    {
+        swap(arr[0], arr[n - 1]);
         n--;
         heapify(arr, n, 0);
     }
@@ -151,5 +170,4 @@ int main()
         cout << arr1[i] << " ";
     }
     cout << endl;
-
 }
