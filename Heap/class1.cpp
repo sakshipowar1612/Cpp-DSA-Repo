@@ -44,6 +44,7 @@ public:
             }
         }
     }
+    
     int deleteFromHeap()
     {
         if (usedSize == 0)
